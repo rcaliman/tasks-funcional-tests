@@ -20,7 +20,7 @@ public class TasksTest {
         options.addArguments("--headless");
         URL gridUrl = new URL("http://localhost:4444/");
         WebDriver driver = new RemoteWebDriver(gridUrl, options);
-        driver.navigate().to("http://localhost:8001/tasks");
+        driver.navigate().to("http://172.17.0.1:8001/tasks");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         return driver;
     }
